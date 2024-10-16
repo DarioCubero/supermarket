@@ -28,7 +28,7 @@
                     <?php echo $ciudad['nombre']; ?>
                 </option>
             <?php endforeach; ?>
-<!-- test commit git -->
+<!-- test commit git 2-->
 
         </select>
         <!-- CHECKBOX MULTISELECT -->
