@@ -1,0 +1,30 @@
+        /* MODAL CARRITO DERECHA */
+        .modal-dialog-right {
+            position: fixed !important;
+            right: 0;
+            margin-right: 30px !important;
+            height: 100%;
+            width: 1000px !important;
+            /* Customize the width of the modal */
+        }
+
+
+        /* DATATABLE */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .pagination button {
+            padding: 5px 10px;
+            margin: 0 2px;
+            border: 1px solid #ccc;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        .pagination button.active {
+            background-color: #007bff;
+            color: white;
+        }
