@@ -12,13 +12,13 @@ if (isset($_GET['pagina'])) {
             include 'views/contact.php';
             break;
         case 'producto':
-            include 'views/producto.php'; 
+            include 'views/producto.php';
             break;
         case 'portfolio':
-            include 'views/portfolio.php'; 
+            include 'views/portfolio.php';
             break;
         case 'about-us':
-            include 'views/about-us.php'; 
+            include 'views/about-us.php';
             break;
         default:
             include 'views/error.php';
