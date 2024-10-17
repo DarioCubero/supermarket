@@ -1,6 +1,5 @@
 <script>
     $(document).ready(function() {
-
         $(document).on('click', '.agregar', function() {
             var id = $(this).data('id');
             var nombre = $(this).data('nombre');
@@ -25,8 +24,6 @@
                 }
             });
         });
-
-
     });
 
     // DATATABLE
@@ -37,7 +34,6 @@
             icon: "success"
         });
     }
-
 
     // function add_to_cart() {
     //     alert("HOLA");

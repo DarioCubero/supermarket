@@ -1,28 +1,27 @@
 <!-- contenido.php -->
 <?php
-
 // var_dump($_GET['pagina']);
 if (isset($_GET['pagina'])) {
     $pagina = $_GET['pagina'];
 
     switch ($pagina) {
         case 'inicio':
-            include 'producto.php';
+            include 'views/producto.php';
             break;
         case 'contacto':
-            include 'contact.php';
+            include 'views/contact.php';
             break;
         case 'producto':
-            include 'producto.php'; 
+            include 'views/producto.php'; 
             break;
         case 'portfolio':
-            include 'portfolio.php'; 
+            include 'views/portfolio.php'; 
             break;
         case 'about-us':
-            include 'about-us.php'; 
+            include 'views/about-us.php'; 
             break;
         default:
-            include 'error.php';
+            include 'views/error.php';
             break;
     }
 } else {

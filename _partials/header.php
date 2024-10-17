@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 require 'services/cart.php';
@@ -15,7 +14,6 @@ require 'services/cart.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $titulo; ?> | Darío cubero</title>
 
-
     <!-- CDNS -->
     <!-- Vincular Bootstrap CSS desde CDN -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
@@ -26,7 +24,7 @@ require 'services/cart.php';
     <!-- Option 1: Include in HTML -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <!-- CUSTOM -->
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="public/css/custom.css">
 
     <style>
         /* Estilo personalizado para que el modal cubra toda la pantalla */
