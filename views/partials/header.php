@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require 'services/cart.php';
+require 'controllers/cartController.php';
 ?>
 
 
