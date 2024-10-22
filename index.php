@@ -7,16 +7,16 @@ require_once 'controllers/UserController.php';
 
 //Views
 include_once 'views/partials/header.php';
-include_once 'views/partials/contenido.php';
+include_once 'views/partials/content.php';
 include_once 'views/partials/footer.php';
 
-$userController = new UserController();
+// $userController = new UserController();
 // $productController = new ProductController();
 // $orderController = new OrderController();
 // $cartController = new CartController();
 
 // Registrar un nuevo usuario
-$userController->register('testuser', 'test@example.com', 'password123');
+// $userController->register('testuser', 'test@example.com', 'password123');
 
 // // Iniciar sesión
 // $user = $userController->login('test@example.com', 'password123');

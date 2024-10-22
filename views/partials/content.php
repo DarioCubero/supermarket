@@ -1,4 +1,4 @@
-<!-- contenido.php -->
+<!-- content.php -->
 <?php
 // var_dump($_GET['pagina']);
 if (isset($_GET['pagina'])) {
@@ -6,13 +6,13 @@ if (isset($_GET['pagina'])) {
 
     switch ($pagina) {
         case 'inicio':
-            include 'views/producto.php';
+            include 'views/product.php';
             break;
         case 'contacto':
             include 'views/contact.php';
             break;
         case 'producto':
-            include 'views/producto.php';
+            include 'views/product.php';
             break;
         case 'portfolio':
             include 'views/portfolio.php';
