@@ -84,7 +84,7 @@ require 'controllers/cartController.php';
                 <div class="modal-body">
                     <!-- Formulario de Login -->
                     <form action="./services/login.php" method="POST">
-                        <div class="mb-3">
+                        <div class="mb-3">0
                             <label for="email" class="form-label">Correo electrónico</label>
                             <input type="email" class="form-control" id="email" name="email" placeholder="correo@ejemplo.com" required>
                         </div>

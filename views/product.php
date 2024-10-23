@@ -13,8 +13,8 @@
                 return number_format($numero, 2, ",", ".");
             }
 
-            if (file_exists("csv/productos.csv")) {
-                if ($handle = fopen("csv/productos.csv", "r")) {
+            if (file_exists("assets/csv/productos.csv")) {
+                if ($handle = fopen("assets/csv/productos.csv", "r")) {
                     echo "<thead>
                             <tr>";
                     // CABECERA
