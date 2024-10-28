@@ -63,41 +63,6 @@
         <br>
         <hr /><br><br><br>
 
-        <!--  Tarjeta de Producto 1 BOOTSTRAP -------------2 -->
-        <!-- <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Producto 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Producto 1</h5>
-                            <p class="card-text">Descripción breve del producto 1. Este producto es excelente.</p>
-                            <p class="card-text"><strong>Precio: $19.99</strong></p>
-                            <a href="#" class="btn btn-primary">Agregar al carrito</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Producto 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Producto 2</h5>
-                            <p class="card-text">Descripción breve del producto 2. Este producto es muy popular.</p>
-                            <p class="card-text"><strong>Precio: $29.99</strong></p>
-                            <a href="#" class="btn btn-primary">Agregar al carrito</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Producto 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Producto 3</h5>
-                            <p class="card-text">Descripción breve del producto 3. Este producto es de alta calidad.</p>
-                            <p class="card-text"><strong>Precio: $39.99</strong></p>
-                            <a href="#" class="btn btn-primary">Agregar al carrito</a>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
     </div>
 </div>
+

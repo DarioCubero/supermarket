@@ -41,6 +41,7 @@ class User {
     }
 
     // Add additional methods for business logic as needed
+    
 }
 
 ?>

@@ -56,7 +56,23 @@
 <!-- SWAL -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
 
-<!-- Cargar scripts al final del body -->
-<script src="datatable/datatable.js"></script>
+
+<!-- Load datatable.js functions only if the DOM have one  -->
+<?php
+if (isset($_GET['pagina'])) {
+    $pagina = $_GET['pagina'];
+
+    if ($pagina === 'inicio' || $pagina === 'producto') {
+        echo "Estás en la página de inicio";
+        ?>   
+        <!-- Cargar scripts al final del body -->
+        <script src="assets/js/datatable/datatable.js"></script>
+        <?php 
+    } 
+} else {
+    echo "Página no especificada";
+}
+?>
+
 
 </body>

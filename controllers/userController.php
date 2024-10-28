@@ -1,34 +1,66 @@
 <?php
-require_once './config.php';
+require_once __DIR__ . '/../config.php';
 
-class UserController {
-    // Registro de un nuevo usuario
-    public function register($username, $email, $password) {
-        global $pdo;
-        $hashedPassword = password_hash($password, PASSWORD_DEFAULT); // Encriptar la contraseña
-        $stmt = $pdo->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
-        return $stmt->execute([$username, $email, $hashedPassword]);
-    }
+// require_once './models/loginModel.php';
+// $loginModel = new Login();
 
-    // Autenticación de usuario
-    public function login($email, $password) {
-        global $pdo;
-        $stmt = $pdo->prepare("SELECT * FROM users WHERE email = ?");
-        $stmt->execute([$email]);
-        $user = $stmt->fetch(PDO::FETCH_ASSOC);
-        
-        if ($user && password_verify($password, $user['password'])) {
-            // Aquí puedes iniciar sesión y guardar la información en la sesión
-            return $user;
+
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
+    if (isset($_POST['action']) && $_POST['action'] === 'register') {
+        foreach ($_POST as $key => $value) {
+            echo "<p>$key: $value</p>";
         }
-        return null;
-    }
+        
+        // Registration form data
+        // $fullname = htmlspecialchars(trim($_POST['fullname']));
+        // $username = htmlspecialchars(trim($_POST['username']));
+        // $email = filter_var(trim($_POST['email']), FILTER_VALIDATE_EMAIL);
+        // $password = trim($_POST['password']);
+        
+        // Validation checks
+        // $errors = [];
+        // if (!$fullname) $errors[] = "Full name is required.";
+        // if (!$username) $errors[] = "Username is required.";
+        // if (!$email) $errors[] = "Valid email is required.";
+        // if (strlen($password) < 6) $errors[] = "Password must be at least 6 characters.";
 
-    // Listar usuarios (opcional)
-    public function getUsers() {
-        global $pdo;
-        $stmt = $pdo->query("SELECT * FROM users");
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        // Process registration if no errors
+        // if (empty($errors)) {
+            global $pdo;
+            $hashedPassword = password_hash($password, PASSWORD_DEFAULT); // Encriptar la contraseña
+            $stmt = $pdo->prepare("INSERT INTO users (fullname, username, email, password) VALUES (?, ?, ?, ?)");
+            $registerStatus=  $stmt->execute([$fullname, $username, $email, $hashedPassword]);
+            // if ($registerStatus) {
+            //     echo "Registration successful!";
+            // } else {
+            //     echo "Registration failed.";
+            // }
+        // } else {
+        //     foreach ($errors as $error) echo "<p>$error</p>";
+        // }
+    } elseif (isset($_POST['action']) && $_POST['action'] === 'login') {
+        // Login form data
+        $email = filter_var(trim($_POST['email']), FILTER_VALIDATE_EMAIL);
+        $password = trim($_POST['password']);
+
+        if ($email && $password) {
+
+            $user = $loginModel->login($email, $password);
+
+
+            if ($user) {
+                // User authenticated
+                echo "Login successful!";
+                // Store user info in session or perform other login actions
+            } else {
+                echo "Invalid email or password.";
+            }
+        } else {
+            echo "Please fill in all fields.";
+        }
     }
 }
+
 ?>
