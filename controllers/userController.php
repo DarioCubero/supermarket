@@ -4,21 +4,19 @@ require_once __DIR__ . '/../config.php';
 // require_once './models/loginModel.php';
 // $loginModel = new Login();
 
-
-
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if (isset($_POST['action']) && $_POST['action'] === 'register') {
         foreach ($_POST as $key => $value) {
             echo "<p>$key: $value</p>";
         }
-        
+
         // Registration form data
-        // $fullname = htmlspecialchars(trim($_POST['fullname']));
-        // $username = htmlspecialchars(trim($_POST['username']));
-        // $email = filter_var(trim($_POST['email']), FILTER_VALIDATE_EMAIL);
-        // $password = trim($_POST['password']);
-        
+        $fullname = htmlspecialchars(trim($_POST['fullname']));
+        $username = htmlspecialchars(trim($_POST['username']));
+        $email = filter_var(trim($_POST['email']), FILTER_VALIDATE_EMAIL);
+        $password = trim($_POST['password']);
+
         // Validation checks
         // $errors = [];
         // if (!$fullname) $errors[] = "Full name is required.";
@@ -28,15 +26,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         // Process registration if no errors
         // if (empty($errors)) {
-            global $pdo;
-            $hashedPassword = password_hash($password, PASSWORD_DEFAULT); // Encriptar la contraseña
-            $stmt = $pdo->prepare("INSERT INTO users (fullname, username, email, password) VALUES (?, ?, ?, ?)");
-            $registerStatus=  $stmt->execute([$fullname, $username, $email, $hashedPassword]);
-            // if ($registerStatus) {
-            //     echo "Registration successful!";
-            // } else {
-            //     echo "Registration failed.";
-            // }
+        global $pdo;
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT); // Encriptar la contraseña
+        $stmt = $pdo->prepare("INSERT INTO users (fullname, username, email, password) VALUES (?, ?, ?, ?)");
+        $registerStatus =  $stmt->execute([$fullname, $username, $email, $hashedPassword]);
+        // if ($registerStatus) {
+        //     echo "Registration successful!";
+        // } else {
+        //     echo "Registration failed.";
+        // }
         // } else {
         //     foreach ($errors as $error) echo "<p>$error</p>";
         // }
@@ -62,5 +60,3 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
     }
 }
-
-?>

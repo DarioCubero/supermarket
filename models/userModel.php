@@ -40,7 +40,6 @@ class User {
         $this->user_id = $user_id;
     }
 
-    // Add additional methods for business logic as needed
     
 }
 

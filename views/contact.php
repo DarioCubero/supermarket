@@ -34,7 +34,6 @@
   </form>
 </div>
 
-
 <div class="container">
   <div class="form-container bg-dark text-light">
     <h2 class="text-center mb-4">Formulario de Registro</h2>
